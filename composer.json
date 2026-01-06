@@ -1,0 +1,24 @@
+{
+    "name": "indiz/process",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^13.4"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "process"
+        }
+    },
+    "config": {
+      "vendor-dir": ".Build/vendor",
+      "bin-dir": ".Build/bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Indiz\\Process\\": "Classes"
+        }
+    }
+
+}
