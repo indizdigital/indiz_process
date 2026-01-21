@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div>
+        <label>{element.title}</label>
+        <div>File Upload or generation</div>
+        <f:if condition="{entity.values.{element.uid}}">
+            <f:then>
+                <f:variable name="ele_val" value="{entity.values.{element.uid}}" />
+                <f:form.textfield name="element_values[{element.uid}]" value="{ele_val.value}"/>
+            </f:then>
+            <f:else>
+                <f:form.textfield name="element_values[{element.uid}]" value=""/>
+            </f:else>
+        </f:if>
+    </div>
+</html>

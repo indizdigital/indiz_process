@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <div>
+        <f:form action="save" method="POST" controller="Entity">
+            <f:for each="{layer.elements}" as="ele">
+                <f:switch expression="{ele.fieldtype}">
+                    <f:case value="input">
+                        <f:render partial="Element/Inputfield" arguments="{element:ele,entity:entity}"></f:render>
+                    </f:case>
+                    <f:case value="text">
+                        <f:render partial="Element/Textfield" arguments="{element:ele,entity:entity}"></f:render>
+                    </f:case>
+                    <f:case value="file">
+                        <f:render partial="Element/File" arguments="{element:ele,entity:entity}"></f:render>
+                    </f:case>
+                </f:switch>
+            </f:for>
+            <f:form.textfield type="hidden" name="entity" value="{entity.uid}" />
+            <f:form.button name="save_entity" value="" >Speichern</f:form.button>
+            <f:if condition="{next_layer}">
+                <f:form.button name="layer" value="{next_layer.uid}" >Speichern & weiter</f:form.button>
+            </f:if>
+        </f:form>
+    </div>
+</html>

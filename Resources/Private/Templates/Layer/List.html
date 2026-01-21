@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+
+	<div class="">
+		<h2 class="">Layer's of entity (current {current_layer})</h2>
+
+		<f:for each="{layers}" as="layer">
+			<f:variable name="active_style" value="" />
+			<div>
+				<f:form action="list" method="POST" controller="Layer">
+					<f:form.textfield type="hidden" name="layer" value="{layer.uid}" />
+					<f:form.textfield type="hidden" name="entity" value="{entity}"/>
+					<f:form.submit value="{layer.title}"></f:form.submit>
+				</f:form>
+				<f:if condition="{layer.uid} == {current_layer}">
+					<h3>{layer.title}</h3>
+					<f:render partial="Entity/FormFields" arguments="{layer:layer,entity:entity,next_layer:next_layer}" />
+				</f:if>
+			</div>
+		</f:for>
+	</div>
+	</f:section>
+</html>

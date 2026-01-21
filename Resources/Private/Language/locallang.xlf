@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2025-02-24T22:34:39Z" product-name="process">
+		<header/>
+		<body>
+			<trans-unit id="tx_process_entity.list">
+				<source>Entitylist</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

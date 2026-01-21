@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2019-02-24T22:34:39Z" product-name="process">
+		<header/>
+		<body>
+			<trans-unit id="tx_process_step">
+				<source>Step</source>
+			</trans-unit>
+			<trans-unit id="tx_process_element">
+				<source>Element</source>
+			</trans-unit>
+			<trans-unit id="tx_process_fieldtype">
+				<source>Feldtyp</source>
+			</trans-unit>
+			<trans-unit id="tx_process_file">
+				<source>Datei</source>
+			</trans-unit>
+			<trans-unit id="tx_process_title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_process_conditions">
+				<source>Bedingungen</source>
+			</trans-unit>
+			<trans-unit id="tx_process_prevstep">
+				<source>Vorheriger Schritt</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
