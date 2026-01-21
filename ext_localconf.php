@@ -9,10 +9,13 @@ call_user_func(
             'IndizProcess',
             'Process',
             [
-                Indiz\Process\Controller\StepController::class => 'list, show,filter'
+                Indiz\Process\Controller\EntityController::class => 'list, save',
+                Indiz\Process\Controller\LayerController::class => 'list'
             ],
             // non-cacheable actions
             [
+                Indiz\Process\Controller\EntityController::class => 'list,save',
+                Indiz\Process\Controller\LayerController::class => 'list'
             ],
             'CType'
         );
